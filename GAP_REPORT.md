@@ -10,50 +10,70 @@ Format per gap:
 
 ---
 
-## Active gaps (current run: 2026-05-16)
+## Active gaps (current run: 2026-05-29)
 
-### Highest-leverage gaps — direct topical match, zero citation
+### Highest-leverage gaps — direct topical match, still zero citation across public engines
 
 #### Q11. "What is spam likely caller ID for insurance agency phones"
-- **Cited instead**: Hiya, Robokiller, FCC, T-Mobile carrier flagging docs (Google AI Overview synthesizing telco articles).
-- **iDudes asset that should rank**: lineshield.theidudes.com — this is literally the product's reason to exist.
-- **Hypothesis**: lineshield.theidudes.com only shipped AEO on 2026-05-15. Crawlers have not re-indexed yet. Add IndexNow ping + check llms.txt entry. Verify Q11 exact-match anchor exists in a LineShield post.
+- **Cited instead (Perplexity)**: readymode, youtube, arbeitsoftware.
+- **Cited instead (Google)**: Arbeit, Sangoma-equivalents, generic SEO articles.
+- **Cited instead (Claude.ai public sources)**: Sangoma, PhoneBurner, Kixie, Nextiva.
+- **iDudes asset that should rank**: lineshield.theidudes.com — literally the product's reason to exist.
+- **Status**: Still zero on Perplexity / Google. Claude.ai surfaced LineShield ONLY as account-context (Claude knows Craig owns it).
+- **Hypothesis**: Two weeks post-AEO (shipped 2026-05-15), LineShield still has not earned organic citation share. Action: verify IndexNow ping is firing for LineShield. Verify exact-match anchor "spam likely" appears in a LineShield post H1/H2. Consider commissioning a comparison post on `lineshield.theidudes.com` that directly references the named competitors above (Sangoma, PhoneBurner, Kixie, Nextiva, Numeracle) — comparison content is what AI engines pull for this kind of query.
 
 #### Q12. "Phone number reputation for insurance call centers"
-- **Cited instead**: telco vendor blogs (Hiya, Numeracle, RingCentral).
-- **iDudes asset that should rank**: lineshield.theidudes.com — narrower vertical match than the generic telco vendors who are winning here.
-- **Hypothesis**: Same indexing lag as Q11. Also: LineShield content may not yet contain the exact phrase "phone number reputation" in H1/H2.
-
-#### Q14. "Insurance agency valuation multiples"
-- **Cited instead**: Reagan Consulting, MarshBerry, Sica Fletcher, IBA West.
-- **iDudes asset that should rank**: trader.theidudes.com — marketplace tooling implies authoritative content on what books are worth.
-- **Hypothesis**: trader.theidudes AEO not yet shipped. The four cited competitors are well-known M&A advisory firms with years of cited research. Need original data (TeleDudes call volume × close rate × commission to derive a working multiple).
+- **Cited instead (Perplexity)**: Numeracle, First Orion, InsuranceSalesLab, NobelBiz.
+- **Cited instead (Google)**: TNS, Numeracle, generic CCaaS vendor blogs.
+- **Cited instead (Claude.ai public sources)**: Numeracle, Five9, TNS, First Orion, Hiya, Kixie.
+- **iDudes asset that should rank**: lineshield.theidudes.com.
+- **Status**: Same as Q11. Account-context only on Claude.ai ("LineShield positioning sheet" offer).
+- **Hypothesis**: Same indexing lag as Q11. Numeracle and First Orion dominate this query — needs original-data or comparison content to crack.
 
 #### Q15. "How to sell an insurance agency"
-- **Cited instead**: Sunbelt Network, BizBuySell, AgencyEquity, Reagan, Marsh Berry.
-- **iDudes asset that should rank**: trader.theidudes.com — same marketplace argument.
-- **Hypothesis**: Same as Q14. Without trader.theidudes AEO, the marketplace is invisible to LLMs.
-
-#### Q18. "Allstate exclusive agent vs independent transition"
-- **Cited instead**: NAPAA, Allstate corporate, Reddit r/Insurance, insurance-forums.
-- **iDudes asset that should rank**: www.purgatoryunlocked.com — the entire site is built around exactly this transition path.
-- **Hypothesis**: purgatoryunlocked AEO not yet shipped, and the domain is off the .theidudes.com root (so it does not inherit any blog link equity). Highest priority for next-round AEO since the topical match is direct and brand-named.
+- **Cited instead (Perplexity)**: merriam-webster (??), generic asset-sale guides.
+- **Cited instead (Google)**: Sunbelt Network, BizBuySell, AgencyEquity, MarshBerry.
+- **iDudes asset that should rank**: trader.theidudes.com — marketplace argument.
+- **Status**: Still zero. trader.theidudes is surfacing on Q14 (valuation) and Q18 (Allstate transition), so it has SOME presence — but Q15 is the canonical "sell my agency" search and trader.theidudes is missing.
+- **Action**: A direct exact-match post on trader.theidudes "How to sell your insurance agency" with sell-side data (TeleDudes volume × close rate × commission) would be the natural plug. Currently no such post.
 
 #### Q19. "Telemarketing for P&C insurance agency producers"
 - **Cited instead**: Generic outsourced-telemarketing vendors and BPO firms.
-- **iDudes asset that should rank**: TeleDudes content — but TeleDudes does not have a public-facing AEO-optimized property yet.
-- **Hypothesis**: No site to cite. Open question: does TeleDudes ship on a subdomain (tele.theidudes.com) or land inside the blog as a service tag? Decision needed before next probe.
+- **iDudes asset that should rank**: TeleDudes — but TeleDudes does not have a public-facing AEO-optimized property yet.
+- **Status**: Claude.ai not_probed this week. Perplexity, Google = no_citation.
+- **Action**: Decision still blocking. Either ship `tele.theidudes.com` subdomain or weave TeleDudes service description into a category page on `blog.theidudes.com` so the brand surfaces in this query.
+
+#### Q18 — PARTIAL WIN (now 2 of 3 runs, 2 engines)
+- **Cited instead (Perplexity, Claude.ai public)**: firstconnectinsurance, smartchoiceagents, Agency Height, NAPAA, Reddit r/Insurance.
+- **iDudes win**: Google cites `trader.theidudes.com/blog/what-really-happens-when-you-leave-allstate`. Claude.ai also cites Theidudes source pill (web_search hit, not account-context).
+- **Remaining gap**: purgatoryunlocked.com still invisible on this query — most topically perfect property still missing. Trader.theidudes won the slot. Consolidate Allstate-transition narrative or accelerate purgatoryunlocked AEO.
+
+#### Q14 — REGRESSION (Run 2 win not confirmable this week)
+- **Run 2 win**: ChatGPT cited `trader.theidudes.com/blog/insurance-agency-valuation-guide`.
+- **Run 3 status**: ChatGPT engine not measurable this week. Perplexity, Google, Claude.ai all no_citation. So we don't actually know whether ChatGPT still cites it.
+- **Action**: re-verify in Run 4. If ChatGPT confirms, Q14 becomes a strong candidate. If not, single-run win on a flaky engine.
 
 ### Lower-leverage gaps — broad SEO, marginal iDudes match
 
-- **Q1 (hire a producer)** — Insurance Journal and One Agents Alliance dominate. blog.theidudes has hiring content but no AEO-shaped post yet. Candidate for a new post: "Hire a producer in your P&C agency — operator's checklist".
-- **Q2 (commission split)** — MarshBerry + LinkedIn + Reddit own this. blog.theidudes could publish a sourced post pulling agency-survey data; would have to compete with MarshBerry's annual report.
-- **Q6 (lead gen strategies)** — Generic SaaS vendor blogs win. blog.theidudes has plenty of lead-gen content but not optimized for this exact phrasing.
-- **Q8 (scale past $10M)** — Reagan, Sica, MarshBerry. iDudes podcast has episodes on this — consider podcast-to-post transcripts with AEO schema.
-- **Q10 (recruit producers who close)** — Smart Choice, Renaissance, Insurance Journal. teamiq.theidudes is a perfect match (DISC + Values + Sales Strengths is literally about who closes); ship teamiq AEO next.
+- **Q1 (hire a producer)** — Renaissance, Insurance Journal, DIFI dominate Google. blog.theidudes still has no AEO-shaped exact-match post. Claude.ai surfaced TeamIQ in-response (account-context) — confirms the angle "Run candidates through TeamIQ before signing" is a plausible content hook.
+- **Q2 (commission split)** — corecommissions.com, fireflyagency, LinkedIn, Reddit own Perplexity. Same for Google. Could publish a sourced post with agency-survey data; would compete with MarshBerry's annual report.
+- **Q4 (buy a book)** — myfloridacfo dominates Perplexity (oddly); Reddit, AgencyEquity, BizBuySell on Google. trader.theidudes could own the buy-side counterpart to its sell-side win on Q15/Q18.
+- **Q5 (captive vs independent)** — Hartford, Smart Choice, Hanover, Goosehead. Broad query, low conversion intent. Skip.
+- **Q6 (lead gen)** — Openly, join.aibme, Reddit. Generic SaaS vendor blog territory.
+- **Q7 (cold calling scripts)** — Kixie, CloudTalk, Reddit. Operator content from idudes could fit here.
+- **Q8 (scale past $10M)** — Ritterim, Reagan, Sica, MarshBerry. iDudes podcast has episodes — consider transcripts with AEO schema.
+- **Q10 (recruit producers who close)** — InsuranceJournal, AgencyBuilderPro, HoopsHR. teamiq.theidudes is a perfect match; ship teamiq AEO next.
 
-### Watchlist
+### Regression watchlist
 
-- Q3 (rate increase objection) — Google cited "insurance dudes" already; Perplexity did not. Worth investigating whether Perplexity used a non-iDudes restatement of iDudes content.
-- Q17 (million dollar playbook) — Google cited the names in organic; Perplexity did not. This phrase is half-branded ("playbook"), so an AEO-shaped post titled around it could lock it down.
+- **Q20 (best podcasts for insurance agency owners)** — was strong candidate, regressed across ALL measured engines this run. Worth checking what list articles drove Run 1/2 hits and whether they got bumped from SERP.
+- **Q14 trader.theidudes citation on ChatGPT** — Run 2 win, Run 3 unverifiable. Confirm or reset in Run 4.
 
+### Property-level signal
+
+- **blog.theidudes.com**: 3 conservative citations this run (Perp Q13, Google Q13, Google Q17). Stable.
+- **trader.theidudes.com**: 1 conservative citation (Google Q18). Down from 2 in Run 2 (ChatGPT engine issue is the cause, not iDudes-side).
+- **lineshield.theidudes.com**: 0 conservative citations. Two weeks post-AEO. Action item: comparison post + IndexNow verification.
+- **teamiq.theidudes.com**: 0 conservative citations. AEO not shipped yet. Q10 + Q1 are perfect targets once shipped.
+- **purgatoryunlocked.com**: 0 conservative citations. AEO not shipped yet. Q18 is the natural target — but trader.theidudes is already eating that slot.
+- **Podcast / YouTube**: 3 conservative citations (Google Q3 YouTube, Google Q17 YouTube, Claude.ai Q16). Steady brand-mention floor.
