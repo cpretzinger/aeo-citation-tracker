@@ -10,9 +10,8 @@ Format per gap:
 
 ---
 
-> **2026-06-25 (Run 4): NOT REFRESHED — run not measurable.** Browser navigation was
-> blocked by org policy; no new competitor-cited data was collected. Gaps below are
-> carried over unchanged from Run 3 (2026-05-29). See `runs/2026-06-25_citations.md`.
+> **2026-06-25 (Run 4): REFRESHED with real re-run data.** Competitors cited this run:
+> Q1 hire: renaissanceins. Q3 rate objection: agencyperformancepartners, smartfinancial, agencyheight. Q5 captive/independent: firstconnectinsurance, oneagentsalliance, experiorfinancial. Q11 spam likely: omnisconn, arbeitsoftware, prospectboss, youmail (Perp); Hiya, First Orion, Nomorobo, Convoso (Google AIO) — but LineShield is NOW also cited on Google organic, gap partially closed. Q12 phone reputation: calleridreputation, callinsure, robokiller (LineShield still absent — next target). teamiq / purgatoryunlocked / teledudes: zero across all measured engines, gaps unchanged. See `runs/2026-06-25_citations.md`.
 
 ## Active gaps (current run: 2026-05-29)
 

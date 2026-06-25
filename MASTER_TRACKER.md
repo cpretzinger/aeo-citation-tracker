@@ -20,56 +20,44 @@ ChatGPT (default), Perplexity (default), Claude.ai (default), Google AI Overview
 
 ## Run history
 
-### 2026-06-25 — Run 4 — NOT MEASURABLE (browser navigation blocked)
+### 2026-06-25 — Run 4
 
-- Queries probed: 0 of 20 (could not reach any engine)
-- Cells (queries × engines): 80
-- **Measurable cells: 0 of 80** — structural. Every `navigate` call through the
-  Claude-in-Chrome MCP returned "This site is blocked by your organization's policy."
-- Cells citing iDudes: 0 / 0 measurable (rate undefined — no denominator)
-- Week-over-week delta: **n/a** — no measurable denominator. Last real data point is
-  Run 3 (2026-05-29): 9/48 = 18.75% conservative. That figure still stands as the most
-  recent measurement.
-- Demo-ready queries: **no change** — graduation clock paused (a not-measurable run
-  does not count toward the 3-of-last-4 window). Q13 and Q16 remain graduated.
+- Queries probed: 20
+- Cells (queries x engines): 80
+- Measurable cells: 40 of 80 (50%). Perplexity 20/20 and Google 20/20 measured cleanly. ChatGPT 0/20 (logged-out login wall, cannot authenticate). Claude.ai 2/20 probed (Q11, Q16), both account-context only; 18 not probed (time budget).
+- Cells citing iDudes (conservative): **8 of 40 = 20.0%**
+- Week-over-week delta: **+1.25 pts** vs Run 3 (9/48 = 18.75%). Denominator differs (ChatGPT login-walled to 0 measurable; Claude.ai mostly not probed), so directional.
+- Demo-ready queries: Q13 and Q16 remain graduated. Q11 (LineShield) and Q8 newly flagged as emerging candidates.
 
-**What happened**
-
-The probe attempted Perplexity, then tested Google, ChatGPT, Claude.ai, example.com,
-blog.theidudes.com, and duckduckgo.com. All seven were blocked by the same org policy.
-The browser ("Browser 1", macOS, local) is connected and the MCP tab group is healthy
-— `list_connected_browsers`, `select_browser`, and `tabs_context_mcp` all succeeded —
-but `navigate` is denied for every URL including example.com, so this is a blanket
-navigation block, not a per-engine allowlist or a transient drop.
+**Top finding**: LineShield earns its FIRST public-discovery citation ever. Google Q11 cites `lineshield.theidudes.com/blog/scam-likely-why-outbound-calls-get-flagged` on "what is spam likely caller ID for insurance agency phones." ~6 weeks after AEO ship (2026-05-15), the product page finally surfaces organically on its core query. Also: Q20 (best podcasts) recovered on Google; Q8 (scale $10M) is a new Perplexity win.
 
 **Per-engine breakdown**
 
-| Engine | Citations | Measurable | Note |
+| Engine | Citations | Measurable | Rate |
 |---|---|---|---|
-| Perplexity | n/a | 0/20 | navigation blocked |
-| Google | n/a | 0/20 | navigation blocked |
-| ChatGPT | n/a | 0/20 | navigation blocked |
-| Claude.ai | n/a | 0/20 | navigation blocked |
+| Perplexity | 2 (Q8, Q16) | 20 | 10.0% |
+| Google | 6 (Q11, Q13, Q16, Q17, Q18, Q20) | 20 | 30.0% |
+| ChatGPT | n/a | 0 | not measurable (login wall) |
+| Claude.ai | 0 conservative (Q11/Q16 account-context) | 2 probed | excluded |
 
-**Top finding this week**
+**Per-property breakdown (conservative)**
 
-The blocker itself is the finding. The AEO probe instrument is down: the connected
-browser cannot navigate to any site under the current org policy. No iDudes citation
-health can be measured until navigation is restored. ChatGPT was already flaky in
-Run 3 (0/20, engine stuck "Thinking"); now the whole surface is dark. **This is a P0
-on the measurement pipeline, separate from any iDudes content question.**
+| Property | Citations | vs Run 3 |
+|---|---|---|
+| blog.theidudes.com | 4 (Perp Q8, Google Q13/Q17/Q20) | +1 |
+| lineshield.theidudes.com | 1 (Google Q11) | +1 FIRST EVER |
+| trader.theidudes.com | 1 (Google Q18) | 0 |
+| brand / podcast | 2 (Perp Q16, Google Q16) | -3 |
+| teamiq / purgatory / teledudes | 0 | 0 |
 
-**Fix before Run 5 (P0)**
+**Concerning / watch**
 
-Inspect the managed-Chrome / URL-blocklist policy on Browser 1 (corporate or MDM
-Chrome policy, or extension-level site block). If it is a Team/Enterprise network-access
-setting, an Owner can adjust it in Admin settings → Capabilities. Verify by navigating
-to example.com through the MCP before re-running. Full detail:
-`runs/2026-06-25_citations.md`.
+- Q13 (DISC) Perplexity REGRESSED to a sourceless "Direct answer" (Google still cites the post). Lost its 3-run Perplexity streak.
+- Perplexity now serves sourceless "Direct answer" for ~half the queries (11 of 20 this run), structurally suppressing citation opportunity.
+- ChatGPT logged out (login wall) — sign the browser into ChatGPT before Run 5.
+- teamiq, purgatoryunlocked, teledudes still zero across all measured engines.
 
-**No data fabricated**: all 80 cells recorded `not measurable (navigation blocked)`.
-No citations, competitor lists, or rates were invented. DEMO_READY and GAP left
-unchanged; artifact not appended (a null point would distort the trend).
+Detail: `runs/2026-06-25_citations.md`. (Note: the original automated run was blocked by the Claude-in-Chrome org allowlist; the allowlist was corrected and the probe re-run — these are the real numbers.)
 
 ---
 

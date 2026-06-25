@@ -1,44 +1,23 @@
 # AEO Probe — This Week — 2026-06-25 (Run 4)
 
-## NOT MEASURABLE — browser navigation blocked by org policy
+One-liner: AEO probe 2026-06-25: 8/40 measurable cells cite iDudes (20.0% conservative), +1.25 pts WoW, 2 demo-ready queries hold + LineShield breaks through.
 
-**One-liner:** AEO probe 2026-06-25: 0/80 measurable (browser nav blocked), no delta,
-2 demo-ready queries unchanged.
+## What moved
+- LineShield's FIRST public-discovery citation ever — Google Q11 cites lineshield.theidudes.com/blog/scam-likely-why-outbound-calls-get-flagged on "spam likely caller ID for insurance agency phones." ~6 weeks post-AEO-ship.
+- Q20 (best podcasts) recovered on Google (blog.theidudes.com, names Craig + Jason). Was a Run 3 regression.
+- Q8 (scale past $10M) — new Perplexity citation of blog.theidudes.com.
+- Q13 (DISC) split: Google still cites the post; Perplexity regressed to a sourceless answer.
+- Q17 (playbook) and Q18 (Allstate) held on Google.
 
-### What happened
-Every `navigate` through the Claude-in-Chrome browser ("Browser 1", macOS, local) was
-rejected with "This site is blocked by your organization's policy." Tested and blocked,
-in order: Perplexity, Google, ChatGPT, Claude.ai, example.com, blog.theidudes.com,
-duckduckgo.com. The browser is connected and the MCP tab group is healthy — the block
-is on `navigate` for every URL, so it is a blanket policy block, not a per-engine
-allowlist and not a transient drop. Zero of 80 cells could be probed.
+## Numbers
+- Measurable: 40/80 (Perplexity 20/20, Google 20/20). ChatGPT 0/20 (login wall). Claude.ai 2 probed, account-context only.
+- Conservative rate: 8/40 = 20.0% (Run 3: 9/48 = 18.75%). WoW +1.25 pts, directional (denominator differs).
+- Per engine: Perplexity 2/20 (10%), Google 6/20 (30%).
+- Per property: blog 4, lineshield 1 (first ever), trader 1, brand/podcast 2; teamiq/purgatory/teledudes 0.
 
-### Numbers
-- Measurable cells: 0 / 80
-- Citations: 0 / 0 measurable (rate undefined)
-- WoW delta: n/a (no denominator). Last real measurement stands at Run 3 (2026-05-29):
-  9/48 = 18.75% conservative.
-- Demo-ready: no change. Q13 (DISC) and Q16 (brand) remain graduated; clock paused.
+## Watch for Run 5
+- ChatGPT was logged out — sign the browser into ChatGPT before the next run to restore that surface.
+- Perplexity now serves sourceless "Direct answer" for ~half the queries — citation opportunity is structurally shrinking there.
+- teamiq, purgatoryunlocked, teledudes still zero across all measured engines.
 
-### Honesty
-No data fabricated. All 80 cells logged `not measurable (navigation blocked)`. No
-citation snippets, competitor lists, or rates invented. DEMO_READY and GAP carried
-over unchanged. Cowork artifact not appended (a null point would distort the trend).
-
-### P0 before Run 5
-Inspect the managed-Chrome / URL-blocklist policy on Browser 1 (corporate/MDM Chrome
-policy or extension-level site block). If it is a Team/Enterprise network-access
-setting, an Owner can adjust it in Admin settings → Capabilities. Verify by navigating
-to example.com through the extension before re-running.
-
-### Git sync (manual — sandbox cannot push)
-```
-cd ~/Documents/AEO-Citation-Tracker
-rm -f .git/index.lock
-git pull --rebase origin main
-git add -A
-git commit -m 'weekly probe 2026-06-25 (not measurable — browser nav blocked)'
-git push origin main
-```
-
-Full detail: `runs/2026-06-25_citations.md`.
+Detail: runs/2026-06-25_citations.md

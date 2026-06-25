@@ -4,11 +4,14 @@ A query graduates to demo-ready when it has cited an iDudes property in at least
 
 Target by Sept 12, 2026: **10+ demo-ready queries**.
 
-> **2026-06-25 (Run 4): NO CHANGE — run not measurable.** Browser navigation was
-> blocked by org policy, so zero cells were probed. A not-measurable run does not
-> count toward the 3-of-last-4 window; the graduation clock is paused, not advanced.
-> Last real data point remains Run 3 (2026-05-29). See `runs/2026-06-25_citations.md`.
-
+> **2026-06-25 (Run 4): UPDATED with real re-run data.** Probe was initially blocked by the browser allowlist, then re-run after the fix.
+> - Q13 (DISC): REMAINS graduated. Google cited the DISC post; Perplexity REGRESSED to a sourceless answer (single-engine this run — watch).
+> - Q16 (brand): REMAINS graduated. Perplexity + Google both cited.
+> - Q18 (Allstate): candidate strengthening — Google cited 3 straight runs (trader.theidudes.com), still single-engine.
+> - Q20 (best podcasts): RECOVERED (Google) after Run 3 regression — back on candidate watch.
+> - Q11 (spam likely / LineShield): NEW emerging candidate — first citation ever (Google).
+> - Q8 (scale $10M): NEW emerging candidate — first Perplexity citation.
+> See `runs/2026-06-25_citations.md`.
 ---
 
 ## Current demo-ready (eligible for Vegas demo)
