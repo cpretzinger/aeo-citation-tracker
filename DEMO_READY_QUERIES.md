@@ -4,6 +4,11 @@ A query graduates to demo-ready when it has cited an iDudes property in at least
 
 Target by Sept 12, 2026: **10+ demo-ready queries**.
 
+> **2026-06-25 (Run 4): NO CHANGE — run not measurable.** Browser navigation was
+> blocked by org policy, so zero cells were probed. A not-measurable run does not
+> count toward the 3-of-last-4 window; the graduation clock is paused, not advanced.
+> Last real data point remains Run 3 (2026-05-29). See `runs/2026-06-25_citations.md`.
+
 ---
 
 ## Current demo-ready (eligible for Vegas demo)

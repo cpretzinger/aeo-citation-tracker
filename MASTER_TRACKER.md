@@ -20,6 +20,59 @@ ChatGPT (default), Perplexity (default), Claude.ai (default), Google AI Overview
 
 ## Run history
 
+### 2026-06-25 — Run 4 — NOT MEASURABLE (browser navigation blocked)
+
+- Queries probed: 0 of 20 (could not reach any engine)
+- Cells (queries × engines): 80
+- **Measurable cells: 0 of 80** — structural. Every `navigate` call through the
+  Claude-in-Chrome MCP returned "This site is blocked by your organization's policy."
+- Cells citing iDudes: 0 / 0 measurable (rate undefined — no denominator)
+- Week-over-week delta: **n/a** — no measurable denominator. Last real data point is
+  Run 3 (2026-05-29): 9/48 = 18.75% conservative. That figure still stands as the most
+  recent measurement.
+- Demo-ready queries: **no change** — graduation clock paused (a not-measurable run
+  does not count toward the 3-of-last-4 window). Q13 and Q16 remain graduated.
+
+**What happened**
+
+The probe attempted Perplexity, then tested Google, ChatGPT, Claude.ai, example.com,
+blog.theidudes.com, and duckduckgo.com. All seven were blocked by the same org policy.
+The browser ("Browser 1", macOS, local) is connected and the MCP tab group is healthy
+— `list_connected_browsers`, `select_browser`, and `tabs_context_mcp` all succeeded —
+but `navigate` is denied for every URL including example.com, so this is a blanket
+navigation block, not a per-engine allowlist or a transient drop.
+
+**Per-engine breakdown**
+
+| Engine | Citations | Measurable | Note |
+|---|---|---|---|
+| Perplexity | n/a | 0/20 | navigation blocked |
+| Google | n/a | 0/20 | navigation blocked |
+| ChatGPT | n/a | 0/20 | navigation blocked |
+| Claude.ai | n/a | 0/20 | navigation blocked |
+
+**Top finding this week**
+
+The blocker itself is the finding. The AEO probe instrument is down: the connected
+browser cannot navigate to any site under the current org policy. No iDudes citation
+health can be measured until navigation is restored. ChatGPT was already flaky in
+Run 3 (0/20, engine stuck "Thinking"); now the whole surface is dark. **This is a P0
+on the measurement pipeline, separate from any iDudes content question.**
+
+**Fix before Run 5 (P0)**
+
+Inspect the managed-Chrome / URL-blocklist policy on Browser 1 (corporate or MDM
+Chrome policy, or extension-level site block). If it is a Team/Enterprise network-access
+setting, an Owner can adjust it in Admin settings → Capabilities. Verify by navigating
+to example.com through the MCP before re-running. Full detail:
+`runs/2026-06-25_citations.md`.
+
+**No data fabricated**: all 80 cells recorded `not measurable (navigation blocked)`.
+No citations, competitor lists, or rates were invented. DEMO_READY and GAP left
+unchanged; artifact not appended (a null point would distort the trend).
+
+---
+
 ### 2026-05-29 — Run 3
 
 - Queries probed: 20

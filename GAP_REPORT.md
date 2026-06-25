@@ -10,6 +10,10 @@ Format per gap:
 
 ---
 
+> **2026-06-25 (Run 4): NOT REFRESHED — run not measurable.** Browser navigation was
+> blocked by org policy; no new competitor-cited data was collected. Gaps below are
+> carried over unchanged from Run 3 (2026-05-29). See `runs/2026-06-25_citations.md`.
+
 ## Active gaps (current run: 2026-05-29)
 
 ### Highest-leverage gaps — direct topical match, still zero citation across public engines
